@@ -12,25 +12,28 @@
 
         body{
             font-family: Arial, Helvetica,sans-serif;
+            position: relative;
         }
 
-        h1{
+        header{
             background-color: black;
             color: white;
             text-align: center;
             padding: 15px;
+
         }
 
         table{
             border-collapse: collapse;
             margin: 50px 60px;
             width: 500px;
+            position:  relative;
         }
         
         thead,tfoot{
             border: 1px solid black;
             padding: 15px 7px 15px 7px;
-            background-color: rgb(161, 161, 161);
+            background-color: rgb(94, 94,94);
             color: white;
         }
         td,th{
@@ -42,10 +45,30 @@
         .numero{
             text-align: right;
         }
+
+        caption{
+            background-color: rgb(39, 39, 39);
+            font-size: 1.5em;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+        }
+
+        tbody > tr:nth-child(2n){
+            background-color: rgb(248, 248, 117);}
+
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color:rgb(94, 94,94);
+        }
     </style>
 </head>
 <body>
-    <h1>uso de tabelas grandes</h1>
+    
+    <header>
+        <h1>uso de tabelas grandes</h1>
+    </header>
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
@@ -56,12 +79,14 @@
             TFOOT
                 TR, TD, TH
     -->
+    
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Posição</th>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Posição</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
         <tbody>
@@ -203,10 +228,18 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td><strong>210.147.125</strong></td>
+                <th scope="row">Total de Habitantes</th>
+                <td colspan="2"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ullam recusandae, officia, soluta at fugit dignissimos incidunt ex fugiat est, fuga perspiciatis tempore molestias quas! Adipisci molestias qui atque ex! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolore expedita eum voluptatem, natus adipisci ullam id nostrum, neque debitis soluta ipsam? Corporis laborum quia suscipit voluptatem neque eum vitae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum optio distinctio eaque voluptatum harum voluptatibus dicta reiciendis, ducimus nihil officia praesentium sed delectus et odio porro deserunt necessitatibus quam inventore! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci dolore eveniet rem rerum ex nulla dolor unde, repellat totam a, tempore, consequatur aliquam reprehenderit nobis. Unde praesentium laboriosam odit nemo!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia perspiciatis maiores excepturi dolor optio, reiciendis natus vero perferendis doloribus modi veritatis cumque harum laudantium porro ut dolores pariatur at nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta praesentium doloremque molestiae. Ratione, molestias excepturi quod nam animi ab praesentium quis non architecto aperiam quas ea, aspernatur repellat, eum suscipit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus dolor minima ullam illum numquam unde provident, quidem officia saepe deserunt ipsum magnam quae ipsa non reiciendis vero natus, assumenda tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium numquam praesentium dolores quae officiis, consequuntur in corrupti doloremque distinctio fuga quis, facilis quod facere eius esse maxime laborum? Quae, voluptates.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi temporibus tempora eius necessitatibus. Reiciendis veniam neque vero? Ipsa atque, accusantium saepe nesciunt quibusdam natus voluptas harum nihil, cupiditate optio Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam aliquid itaque deserunt harum saepe voluptates laborum tenetur, qui nihil doloribus, nesciunt ducimus soluta atque dolorum voluptate optio commodi aut. ipsum dolor sit amet consectetur adipisicing elit. Totam quo numquam sint. Voluptatem fuga quidem ea voluptatibus non ut tenetur, ipsum ipsam mollitia voluptates architecto consequatur eaque distinctio possimus aut</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, ipsum. Officiis, praesentium recusandae temporibus quos laborum dolorem vitae vero facere autem non! Impedit ex in, blanditiis earum hic sunt delectus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores reprehenderit magnam harum sequi modi amet, quibusdam molestiae placeat corporis doloribus quod sunt, dolorem facilis nesciunt minima consequuntur eligendi, repudiandae tempore! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, numquam deserunt. Sed quod nam ab obcaecati aliquid, corrupti officia hic dolorem rerum quia eaque provident iure repudiandae exercitationem at culpa? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi aperiam culpa dolores nulla maiores architecto omnis adipisci est, qui et in expedita! Laudantium sit ipsam optio hic excepturi nulla doloribus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ducimus, adipisci vitae nulla ipsum reiciendis, quae, consequuntur libero consectetur fugit deserunt? Cumque vitae reprehenderit id fuga placeat sapiente unde enim.</p>
+
 </body>
 </html>
